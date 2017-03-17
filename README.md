@@ -5,7 +5,7 @@
 * redirects to original URL if shortened URL is passed
 
 ## Example:
-#### Passing A Valid URL:
+#### Passing a Valid URL:
  ``https://peaceful-caverns-18407.herokuapp.com/https://www.google.com``
 #### Response:
 { "original_url": "https://www.google.com", "short_url": "https://peaceful-caverns-18407.herokuapp.com/1" }
