@@ -8,6 +8,6 @@
 #### Passing a Valid URL:
  ``https://peaceful-caverns-18407.herokuapp.com/https://www.google.com``
 #### Response:
-{ "original_url": "https&#58;//www.google.com", "short_url": "https&#58;//peaceful-caverns-18407.herokuapp.com/1" }
+{ "original_url": "https://www.google.com", "short_url": "https://peaceful-caverns-18407.herokuapp.com/1" }
 
 [valid URL]: https://github.com/chriso/validator.js
