@@ -3,17 +3,13 @@
   "version": "1.0.0",
   "description": "allows you to pass a URL as a parameter and receive a shortened URL",
   "main": "server.js",
-  "scripts": {
-    "test": "mocha"
-  },
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^3.1.2"
-  },
+  "devDependencies": {},
   "author": "Jasim Taqi",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.5.0",
     "mongoose": "^4.9.0",
+    "mongoose-auto-increment": "^5.0.1",
     "validator": "^7.0.0"
   }
 }
