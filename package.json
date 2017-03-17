@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "allows you to pass a URL as a parameter and receive a shortened URL",
   "main": "server.js",
-  "devDependencies": {},
   "author": "Jasim Taqi",
   "license": "ISC",
   "dependencies": {
