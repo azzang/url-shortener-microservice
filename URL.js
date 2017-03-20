@@ -1,9 +1,9 @@
-var mongoose = require('mongoose');
-var autoIncrement = require('mongoose-auto-increment');
-var Schema = mongoose.Schema;
+const mongoose = require('mongoose');
+const autoIncrement = require('mongoose-auto-increment');
 
-var URLSchema = new Schema({
-  value: String
+const Schema = mongoose.Schema;
+const URLSchema = new Schema({
+  value: String,
 });
 
 mongoose.Promise = require('bluebird');

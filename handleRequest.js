@@ -1,7 +1,8 @@
-var validator = require('validator');
-var URL = require('./URL');
-var invalidURLMessage = 'Wrong url format, make sure you have a valid protocol and real site.';
-var baseURL = 'https://peaceful-caverns-18407.herokuapp.com';
+const validator = require('validator');
+const URL = require('./URL');
+
+const invalidURLMessage = 'Wrong url format, make sure you have a valid protocol and real site.';
+const baseURL = 'https://peaceful-caverns-18407.herokuapp.com';
 
 function sendJSON(err, res, urlValue, urlId) {
   res.setHeader('Content-Type', 'application/json');
@@ -11,7 +12,7 @@ function sendJSON(err, res, urlValue, urlId) {
   }
   res.end(JSON.stringify({
     original_url: urlValue,
-    short_url: `${baseURL}/${urlId}`
+    short_url: `${baseURL}/${urlId}`,
   }, null, 3));
 }
 
@@ -28,11 +29,9 @@ function redirect(err, url) {
   this.end();
 }
 
-module.exports = function(req, res) {
-  var url = req.url.slice(1);
-  if (validator.isURL(url))
-    return URL.findOne({ value: url }, sendURLs.bind({ res, value: url }));
-  if (/^\d+$/.test(url))
-    return URL.findById(url, redirect.bind(res));
+module.exports = (req, res) => {
+  const url = req.url.slice(1);
+  if (validator.isURL(url)) return URL.findOne({ value: url }, sendURLs.bind({ res, value: url }));
+  if (/^\d+$/.test(url)) return URL.findById(url, redirect.bind(res));
   sendJSON(new Error(invalidURLMessage), res);
 };

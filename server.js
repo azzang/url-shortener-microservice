@@ -1,6 +1,6 @@
-var http = require('http');
-var server = http.createServer(require('./handleRequest'));
-var mongoose = require('mongoose');
+const http = require('http');
+const server = http.createServer(require('./handleRequest'));
+const mongoose = require('mongoose');
 
 mongoose.connect(process.env.MONGOLAB_URI);
 
